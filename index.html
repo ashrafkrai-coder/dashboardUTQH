@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Hafazan UTQH</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Dashboard Hafazan</p>
+          <h1>Rekod Hafazan UTQH calon SPM 2026</h1>
+          <p class="hero-credit">Smart Dashboard v1.0 developed by @ust Ashraf</p>
+        </div>
+        <img
+          class="hero-logo"
+          src="./icons/logo-sekolah.png"
+          alt="Logo sekolah"
+        />
+      </header>
+
+      <section class="controls">
+        <div class="control-group">
+          <label for="classSelect">Pilih Kelas</label>
+          <select id="classSelect" aria-label="Pilih kelas"></select>
+        </div>
+        <button id="refreshBtn" class="btn-refresh" aria-label="Kemas kini data">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-spin-target"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+          Kemas Kini
+        </button>
+      </section>
+
+      <div id="statusBar" class="status-bar" aria-live="polite">
+        <span id="updateStatus">Sedia</span>
+        <span id="lastUpdated"></span>
+      </div>
+
+      <section class="summary" aria-live="polite">
+        <article class="summary-card">
+          <p>Jumlah Murid</p>
+          <strong id="studentCount">0</strong>
+        </article>
+        <article class="summary-card">
+          <p>Purata Kelas</p>
+          <strong id="classAverage">0%</strong>
+        </article>
+        <article class="summary-card">
+          <p>Surah Wajib</p>
+          <strong id="surahCount">6</strong>
+        </article>
+      </section>
+
+      <section id="status" class="status">Memuatkan data...</section>
+      <section id="studentsContainer" class="students" aria-live="polite"></section>
+    </main>
+
+    <script src="./app.js"></script>
+    <script src="./pwa-register.js"></script>
+  </body>
+</html>
