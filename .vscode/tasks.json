@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start local server",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        ".vscode/static-server.js"
+      ],
+      "isBackground": true,
+      "background": {
+        "activeOnStart": true,
+        "beginsPattern": "Starting local server",
+        "endsPattern": "Local server running at"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
